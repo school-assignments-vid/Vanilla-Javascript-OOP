@@ -1,15 +1,5 @@
 [
   {
-    "id": "settings",
-    "name": "Settings",
-    "icon": "https://cdn-icons-png.flaticon.com/512/3524/3524659.png",
-    "contentUrl": "apps/settings/index.html",
-    "styleUrl": "apps/settings/style.css",
-    "scriptUrl": "apps/settings/script.js",
-    "width": 600,
-    "height": 500
-  },
-  {
     "id": "about_me",
     "name": "About Me",
     "icon": "assets/icons/icon.png",
@@ -23,16 +13,6 @@
     "name": "Minecraft",
     "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/minecraft.svg",
     "contentUrl": "apps/minecraft/index.html",
-    "width": 900,
-    "height": 600
-  },
-  {
-    "id": "vscode",
-    "name": "Text Editor",
-    "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/vscode.svg",
-    "contentUrl": "apps/vscode/index.html",
-    "styleUrl": "apps/vscode/style.css",
-    "scriptUrl": "apps/vscode/app.js",
     "width": 900,
     "height": 600
   }
