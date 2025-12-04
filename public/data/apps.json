@@ -1,12 +1,13 @@
 [
   {
-    "id": "about_me",
+    "id": "aboutme",
     "name": "About Me",
     "icon": "assets/icons/icon.png",
     "contentUrl": "apps/about/index.html",
     "styleUrl": "apps/about/style.css",
-    "width": 450,
-    "height": 650
+    "scriptUrl": "apps/about/script.js",
+    "width": 400,
+    "height": 600
   },
   {
     "id": "minecraft",

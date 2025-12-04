@@ -1,85 +1,126 @@
 .about-me-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px; 
-  padding: 8px;
+    gap: 16px;
+    padding: 24px;
+    height: 100%;
 }
 
 .about-me-container h1,
 .about-me-container h2 {
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 8px;
-  color: var(--zen-accent);
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--zen-accent);
 }
 
 .about-me-container p {
-  line-height: 1.6;
-  color: var(--zen-foreground);
-  opacity: 0.9;
-  font-size: 14px;
+    line-height: 1.6;
+    color: var(--zen-foreground);
+    opacity: 0.9;
+    font-size: 14px;
+    margin: 0;
 }
 
 .zen-card {
-  padding: 20px;  
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 8px; 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  
-  /* Default Dark Mode */
-  background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border: 1px solid var(--zen-border);
+    border-radius: 12px;
+    background-color: var(--zen-glass-bg, rgba(20, 20, 20, 0.6));
+    backdrop-filter: blur(var(--zen-glass-blur, 20px));
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-out;
 }
 
-/* Light Mode Overrides */
 body.light .zen-card {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  color: #000;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    color: #000;
 }
 
 body.light .about-me-container p {
-  color: #333; /* Darker text for contrast on light bg */
+    color: #333;
 }
 
-/* Profile Header */
 .profile-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+}
+
+.avatar-wrapper {
+    position: relative;
+    margin-bottom: 16px;
 }
 
 .profile-header .profile-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 16px;
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05), 0 0 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--zen-border-strong);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-body.light .profile-header .profile-avatar {
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05), 0 0 20px rgba(0, 0, 0, 0.1);
+.status-indicator {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--zen-success);
+    border: 3px solid var(--zen-surface-1);
+    border-radius: 50%;
 }
 
 .profile-header .profile-avatar:hover {
-  transform: scale(1.05) rotate(2deg);
+    transform: scale(1.1) rotate(5deg);
 }
 
 .profile-header .profile-name {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--zen-foreground) 0%, var(--zen-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
 }
 
 .profile-header .profile-title {
-  font-size: 1rem;
-  color: var(--zen-success);
-  margin-top: 4px;
-  font-family: var(--font-mono);
-  opacity: 0.8;
+    font-size: 0.9rem;
+    color: var(--zen-success);
+    font-family: var(--font-mono);
+    opacity: 0.8;
+    background: rgba(108, 203, 95, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.links-section {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--zen-border);
+    background: var(--zen-surface-2);
+    color: var(--zen-foreground);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.social-btn:hover {
+    background: var(--zen-accent);
+    color: var(--zen-accent-inverse);
+    border-color: var(--zen-accent);
+    transform: translateY(-2px);
 }
