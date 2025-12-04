@@ -1,0 +1,59 @@
+.boot-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--zen-background);
+  color: var(--zen-accent);
+
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  pointer-events: all;
+  user-select: none;
+
+  .logo-wrapper {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo-svg {
+      width: 100%;
+      height: 100%;
+      fill: var(--zen-accent);
+      display: block;
+      will-change: transform, opacity;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+    }
+  }
+
+  .spinner-wrapper {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    .spinner-svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      .spinner-path {
+        fill: none;
+        stroke: var(--zen-accent);
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-opacity: 0.9;
+      }
+    }
+  }
+}

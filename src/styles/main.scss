@@ -1,0 +1,101 @@
+:root {
+    --zen-background: #0a0a0a;
+    --zen-foreground: #ffffff;
+
+    --zen-surface-1: #141414;
+    --zen-surface-2: #1f1f1f;
+    --zen-surface-3: #2d2d2d;
+
+    --zen-border: rgba(255, 255, 255, 0.08);
+    --zen-border-strong: rgba(255, 255, 255, 0.15);
+
+    --zen-glass-bg: rgba(20, 20, 20, 0.75);
+    --zen-glass-blur: 20px;
+
+    --font-sans: "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font-mono: "Cascadia Code", "Consolas", "Courier New", monospace;
+
+    --zen-accent: #ffffff;
+    --zen-accent-inverse: #000000;
+    --zen-success: #6ccb5f;
+    --zen-warning: #fce100;
+    --zen-error: #ff99a4;
+
+    --zen-cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23ffffff" stroke="%23000000" stroke-width="1.5"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.5027 9.96958C20.7073 10.4588 20.6154 12.1941 19.3658 12.5533L13.0605 14.3658L10.1807 20.2606C9.60996 21.4288 7.88499 21.218 7.6124 19.9468L4.67677 6.25646C4.44638 5.18204 5.5121 4.2878 6.53019 4.70126L19.5027 9.96958Z"/></svg>') 4 4, default;
+}
+
+.light {
+    --zen-background: #f3f3f3;
+    --zen-foreground: #000000;
+
+    --zen-surface-1: #ffffff;
+    --zen-surface-2: #f7f7f7;
+    --zen-surface-3: #eaeaea;
+
+    --zen-border: rgba(0, 0, 0, 0.06);
+    --zen-border-strong: rgba(0, 0, 0, 0.15);
+
+    --zen-glass-bg: rgba(255, 255, 255, 0.7);
+
+    --zen-accent: #000000;
+    --zen-accent-inverse: #ffffff;
+    --zen-success: #107c10;
+    --zen-error: #c50f1f;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-color: var(--zen-background);
+    color: var(--zen-foreground);
+    overflow: hidden;
+    cursor: var(--zen-cursor);
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 3px solid transparent;
+    background-clip: content-box;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
