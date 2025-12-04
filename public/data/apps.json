@@ -28,10 +28,12 @@
   },
   {
     "id": "vscode",
-    "name": "Visual Studio Code",
+    "name": "Text Editor",
     "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/vscode.svg",
     "contentUrl": "apps/vscode/index.html",
-    "width": 1000,
-    "height": 700
+    "styleUrl": "apps/vscode/style.css",
+    "scriptUrl": "apps/vscode/app.js",
+    "width": 900,
+    "height": 600
   }
 ]
